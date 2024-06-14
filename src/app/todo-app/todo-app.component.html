@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<div class="todo-container">
+    <h1>To-Do List</h1>
+
+    <div class="input-container">
+        <input [(ngModel)]="newTask" placeholder="Add a new task" class="form-control" />
+        <button class="btn btn-outline-info" (click)="addTask()">Add Task</button>
+    </div>
+
+    <ul class="task-list">
+        <li *ngFor="let task of tasks; let i = index" [class.completed]="task.completed">
+            <input type="checkbox" [(ngModel)]="task.completed" (click)="toggleCompletion(task)" />
+            <span>{{ task.title }}</span>
+            <button class="btn btn-outline-danger" (click)="removeTask(i)">Remove</button>
+        </li>
+    </ul>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
