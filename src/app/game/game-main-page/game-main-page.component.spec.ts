@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChatgptComponent } from './chatgpt.component';
+import { GameMainPageComponent } from './game-main-page.component';
 
-describe('ChatgptComponent', () => {
-  let component: ChatgptComponent;
-  let fixture: ComponentFixture<ChatgptComponent>;
+describe('GameMainPageComponent', () => {
+  let component: GameMainPageComponent;
+  let fixture: ComponentFixture<GameMainPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChatgptComponent]
+      imports: [GameMainPageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ChatgptComponent);
+    fixture = TestBed.createComponent(GameMainPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

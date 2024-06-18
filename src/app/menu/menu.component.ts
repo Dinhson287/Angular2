@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { AuthService } from '../service/authen.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
@@ -22,10 +23,13 @@ export class MenuComponent {
   gotoHome(){
     this.router.navigate([''])
   }
-  gotoChatbot(){
-    this.router.navigate(['chatgpt'])
-  }
   logout(){
     this.auth.logout();
+  }
+  login(){
+    this.router.navigate(['login']);
+  }
+  gotoGame(){
+    this.router.navigate(['game']);
   }
 }

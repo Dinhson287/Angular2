@@ -1,0 +1,20 @@
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+.welcome{
+  margin-left: 600px;
+  margin-top: 10px;
+  margin-right: 90px;
+}
+.navbar-brand{
+  margin-left: 10px;
+}
+.btn{
+  margin-top: 5px;
+}
+ul>li>a{
+  margin-top: 5px;
+}
+ul>li>a:hover{
+  color: rgb(14, 188, 188);
+}

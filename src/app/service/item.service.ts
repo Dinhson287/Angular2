@@ -6,7 +6,7 @@ import { Item } from '../item.model';
 const httpOptions ={
   headers:new HttpHeaders({'Content-Type':'Application/json'})
 }
-const apiUrl = '//';
+const apiUrl = 'https://666a67177013419182cf24b8.mockapi.io/api/v2/foods';
 
 @Injectable({
   providedIn: 'root'

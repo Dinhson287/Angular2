@@ -1,0 +1,12 @@
+<button id="btn2" type="button" class="btn btn-outline-info" (click)="goback()">
+  Back
+</button>
+<div class="game-board">
+  <div *ngFor="let card of cards" (click)="selectCard(card)" [class.flipped]="card.flipped || card.matched">
+    <div class="card">
+      <div class="card-front">{{ card.value }}</div>
+      <div class="card-back">?</div>
+    </div>
+  </div>
+</div>
+

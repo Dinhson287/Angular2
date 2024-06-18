@@ -2,11 +2,19 @@
     width: 50%;
     margin-top: 100px;
     height: 100%;
+
 }
-h2{
+h1{
     text-align: center;
+    margin-top: 15px;
 }
 body{
     font-family: 'Roboto Mono', monospace;
     background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+.btn{
+  margin-top: 5px;
+}
+a{
+  text-decoration: none;
 }

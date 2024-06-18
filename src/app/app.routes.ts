@@ -5,7 +5,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RegisterComponent } from './register/register.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
-import { ChatgptComponent } from './chatgpt/chatgpt.component';
+import { TodoAuthGuard } from './guard/todo-auth.guard';
+
 
 export const routes: Routes = [
     {
@@ -22,11 +23,13 @@ export const routes: Routes = [
     },
     {
         path: 'todo',
-        component: TodoAppComponent
+        component: TodoAppComponent,
+        canActivate:[TodoAuthGuard],
     },
     {
-        path: 'chatgpt',
-        component: ChatgptComponent
+      path:'game',
+     loadChildren: () => import('./game/game.module').then((m) => m.GameModule),
+     canActivate:[TodoAuthGuard],
     },
     {
         path: '**',
@@ -37,6 +40,7 @@ export const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers:[TodoAuthGuard]
 })
 export class AppRoutingModule { }
